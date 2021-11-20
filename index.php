@@ -251,7 +251,7 @@
                                 <legend>Please, enter your email and password for login.</legend>
                                 
                                 <?php if(isset($_SESSION["error"])){?>
-                                    echo <div class="alert">
+                                    <div class="alert">
                                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                                         <strong> Please check again. </strong>
                                     </div>
@@ -312,14 +312,18 @@
 <!--  เพิ่มมม -->
 <script>
         <?php if(isset($_SESSION["error"])){?>
-            document.getElementById('id01').style.display = "block";
+            window.onload = function() {
+                document.getElementById('id01').style.display = "block";
+            }
         <?php
         unset($_SESSION["error"]);
             } 
         ?>
         
         <?php  if(isset($_SESSION["register"])){ ?>
-            document.getElementById('id01').style.display = "block";
+            window.onload = function() {
+                document.getElementById('id01').style.display = "block";
+            }
         <?php unset($_SESSION["register"]); } ?>
 </script>
 
