@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+.row{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background:url("https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1925&q=80");
+}
+
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.container .title{
+  font-size: 40px;
+  font-weight: 500;
+  position: relative;
+}
+
+/*เส้นใต้*/
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #778899, #696969);
+}
+
+/*จัดวางเลเอาท์*/
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;  /*ย่อขนาดเว็บ ตกลงมาข้างล่าง*/
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+.content .alert-pass{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  color:white ;
+  background-color: lightseagreen ;
+}
+
+.content .alert-fail{
+  margin-top: 1rem; /*ระยะห่างด้านบทน*/
+  display: flex;    /*สร้าง flex*/
+  justify-content: center;  /*จัดให้อยู่กึ่งกลาง*/
+  color:white ;           /*อักษรสีขาว*/
+  background-color: tomato ;  /*พื้นหลัง*/
+}
+
+/* link */
+a.clink:link {color:black;text-decoration:none;} /*สีก่อนกด*/
+a.clink:hover {text-decoration:underline;}   /*วางเม้าส์ มีขีดเส้นใต้*/
+
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/*กล่องใส่ข้อมูล*/
+.user-details .input-box input{
+  height: 35px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box select{
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #2F4F4F;
+}
+
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ 
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #696969;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #696969	,#D3D3D3	);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #778899, #696969);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color:back;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+}
+
+.popup {
+  z-index: 2;
+  margin: 180px auto;  /*ระยห่างบน 180 ซ้ายขวา auto*/
+  padding: 25px;    /*ระยะห่างภายใน*/
+  background: #fff;   
+  border-radius: 5px;   /*ความหนารอบ*/
+  width: 42%;     /*กว้าง*/
+  height: 38%;    /*ยาว*/
+  position: relative;
+  transition: all 5s ease-in-out;   
+}
+
+.popup .close {
+  position: absolute;
+  top: 8px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  color:  #C0C0C0;
+}
+
+.popup .close:hover {
+  color: black;
+}
+
+/* ข้อความใน popup*/
+.popup h2 {
+  margin:20px 29%;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+/* ข้อความใน popup*/
+.popup .backH{
+  display: inline;  /*ใอยู่บรรทัดเดียวกัน*/
+  margin:20px 220px;
+}
+
+.popup .passHome{
+  margin:10px 250px;
+}
+
+/*icon fail*/
+.popup .fail{
+  margin-left: 42%;
+  font-size:80px;  /*ปรับขนาด icon*/
+  color: #990000;
+}
+  
+.popup .pass{
+  margin-left: 42%;
+  font-size:80px;  /*ปรับขนาด icon*/
+  color: #006633;
+}
+
+
+/* ข้อความใน popup*/
+.popup .content-a {
+  color: #696969;
+  margin-top: 10;
+  margin: 20px 110px;
+}
+
+@media screen and (max-width: 700px){
+  .popup{
+    width: 70%;
+  }
+}
