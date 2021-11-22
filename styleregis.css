@@ -16,7 +16,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
   background:url("https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1925&q=80");
 }
 
@@ -147,10 +147,13 @@ form .input-box span.details{
  form input[type="radio"]{
    display: none;
  }
+
+ /* เพิ่มมมมม ; */
  form .button{
    height: 45px;
-   margin: 35px 0
+   margin: 35px 0;
  }
+
  form .button input{
    height: 100%;
    width: 100%;
@@ -162,11 +165,11 @@ form .input-box span.details{
    letter-spacing: 1px;
    cursor: pointer;
    transition: all 0.3s ease;
-   background: linear-gradient(135deg, #696969	,#D3D3D3	);
+   background: linear-gradient(135deg, #696969	,#DCDCDC	); 
  }
  form .button input:hover{
   /* transform: scale(0.99); */
-  background: linear-gradient(-135deg, #778899, #696969);
+  background: linear-gradient(-135deg, #696969, #696969);
   }
  @media(max-width: 584px){
  .container{
@@ -287,4 +290,13 @@ form .user-details .input-box{
   .popup{
     width: 70%;
   }
+}
+
+.toggle-password {
+  color: #696969;
+  position:absolute;
+  float: right;
+  cursor: pointer;
+  margin-left: -30px;
+  margin-top: 9px;
 }

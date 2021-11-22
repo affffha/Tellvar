@@ -80,6 +80,7 @@ body {
     transition-duration: 0.4s;
     border-radius: 8px;
 }
+
 .button1:hover {
     background-color: rgba(0,0,0,0.8);
     color: white; /*สีตัวอักษรสีขาว*/
